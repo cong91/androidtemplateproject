@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="vn.framgia.boilerplate"
+    android:versionCode="1"
+    android:versionName="1.0.0" >
+
+    <uses-sdk
+        android:minSdkVersion="21"
+        android:targetSdkVersion="27" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name="vn.framgia.boilerplate.App"
+        android:allowBackup="true"
+        android:debuggable="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:testOnly="true"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="vn.framgia.boilerplate.ui.login.RegisterActivity"
+            android:theme="@style/Translucent" />
+        <activity
+            android:name="vn.framgia.boilerplate.ui.login.LoginActivity"
+            android:theme="@style/Splash" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="vn.framgia.boilerplate.ui.list.PostListActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
+
+        <!-- TODO:put your fabric api key here -->
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="" />
+
+        <provider
+            android:name="com.crashlytics.android.CrashlyticsInitProvider"
+            android:authorities="vn.framgia.boilerplate.crashlyticsinitprovider"
+            android:exported="false"
+            android:initOrder="100" />
+        <provider
+            android:name="com.squareup.picasso.PicassoProvider"
+            android:authorities="vn.framgia.boilerplate.com.squareup.picasso"
+            android:exported="false" />
+        <provider
+            android:name="android.arch.lifecycle.ProcessLifecycleOwnerInitializer"
+            android:authorities="vn.framgia.boilerplate.lifecycle-trojan"
+            android:exported="false"
+            android:multiprocess="true" />
+        <provider
+            android:name="com.android.tools.ir.server.InstantRunContentProvider"
+            android:authorities="vn.framgia.boilerplate.com.android.tools.ir.server.InstantRunContentProvider"
+            android:multiprocess="true" />
+    </application>
+
+</manifest>

@@ -1,0 +1,4 @@
+#Wed Aug 29 15:28:47 ICT 2018
+base.0=/Users/congnt/Project/Android/boilerplatedev/app/build/intermediates/transforms/dexMerger/debug/6
+path.0=classes.dex
+renamed.0=classes.dex
